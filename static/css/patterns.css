@@ -1,0 +1,75 @@
+/* HAHAHAHAHA HOO WEE BABY LETS GO */
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    opacity: 0.5;
+    z-index: -1; 
+}
+.gradial-bg {
+    background-color: #e5e5f7;
+    opacity: 0.5;
+    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, var(--bg-color) 40px), 
+                      repeating-linear-gradient(var(--pattern-color), var(--pattern-color-trans));
+}
+
+.polka-bg {
+    background-image: radial-gradient(var(--pattern-color) 1.35px, transparent 1.35px),
+                      radial-gradient(var(--pattern-color) 1.35px, var(--bg-color) 1.35px);
+    background-size: 54px 54px;
+    background-position: 0 0, 27px 27px;
+}
+
+/* Line Patterns */
+.vertical-lines {
+    background-image: linear-gradient(to right, var(--pattern-color), var(--pattern-color) 20px, var(--bg-color) 20px, var(--bg-color));
+    background-size: 40px 100%;
+}
+
+.horizontal-lines {
+    background-image: linear-gradient(0deg, var(--bg-color) 50%, var(--pattern-color) 50%);
+    background-size: 40px 40px;
+}
+
+/* Cross Pattern */
+.crosses {
+    background: radial-gradient(circle, transparent 20%, var(--bg-color) 20%, var(--bg-color) 80%, transparent 80%, transparent), 
+                radial-gradient(circle, transparent 20%, var(--bg-color) 20%, var(--bg-color) 80%, transparent 80%, transparent) 67.5px 67.5px, 
+                linear-gradient(var(--pattern-color) 5.4px, transparent 5.4px) 0 -2.7px, 
+                linear-gradient(90deg, var(--pattern-color) 5.4px, var(--bg-color) 5.4px) -2.7px 0;
+    background-size: 135px 135px, 135px 135px, 67.5px 67.5px, 67.5px 67.5px;
+}
+
+/* No-Texture */
+.no-texture {
+    background-image: repeating-linear-gradient(45deg, var(--pattern-color) 25%, transparent 25%, transparent 75%, var(--pattern-color) 75%, var(--pattern-color)),
+                      repeating-linear-gradient(45deg, var(--pattern-color) 25%, var(--bg-color) 25%, var(--bg-color) 75%, var(--pattern-color) 75%, var(--pattern-color));
+    background-size: 54px 54px;
+    background-position: 0 0, 27px 27px;
+}
+
+
+.iso {
+  background-color: #e5e5f7;
+opacity: 0.6;
+background-image:  linear-gradient(30deg, var(--pattern-color) 12%, transparent 12.5%, transparent 87%, var(--pattern-color) 87.5%, var(--pattern-color)), linear-gradient(150deg, var(--pattern-color) 12%, transparent 12.5%, transparent 87%, var(--pattern-color) 87.5%, var(--pattern-color)), linear-gradient(30deg, var(--pattern-color) 12%, transparent 12.5%, transparent 87%, var(--pattern-color) 87.5%, var(--pattern-color)), linear-gradient(150deg,var(--pattern-color) 12%, transparent 12.5%, transparent 87%, var(--pattern-color) 87.5%, var(--pattern-color)), linear-gradient(60deg, var(--pattern-color-trans) 25%, transparent 25.5%, transparent 75%, var(--pattern-color-trans) 75%, var(--pattern-color-trans)), linear-gradient(60deg, var(--pattern-color-trans) 25%, transparent 25.5%, transparent 75%, var(--pattern-color-trans) 75%, var(--pattern-color-trans));
+background-size: 80px 140px;
+background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+}
+.no-texture {
+    background-color: var(--bg-color);
+    background-image: repeating-linear-gradient(45deg, var(--pattern-color) 25%, transparent 25%, transparent 75%, var(--pattern-color) 75%, var(--pattern-color)),
+                      repeating-linear-gradient(45deg, var(--pattern-color) 25%, var(--bg-color) 25%, var(--bg-color) 75%, var(--pattern-color) 75%, var(--pattern-color));
+    background-size: 54px 54px;
+    background-position: 0 0, 27px 27px;
+}
+.paper {
+  background-color: #e5e5f7;
+opacity: 0.6;
+background-image:  linear-gradient(var(--pattern-color) 2.2px, transparent 2.2px), linear-gradient(90deg, var(--pattern-color) 2.2px, transparent 2.2px), linear-gradient(var(--pattern-color) 1.1px, transparent 1.1px), linear-gradient(90deg, var(--pattern-color) 1.1px, var(--pattern-color-trans) 1.1px);
+background-size: 55px 55px, 55px 55px, 11px 11px, 11px 11px;
+background-position: -2.2px -2.2px, -2.2px -2.2px, -1.1px -1.1px, -1.1px -1.1px;
+}

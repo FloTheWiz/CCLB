@@ -1,0 +1,18 @@
+<section class="card columnwrap">
+    <h3 id="lb-dropdown"class="section-header dropdown">
+    <span>
+    <svg id="lb-dropdown-svg"xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+      </svg>
+      </span>All Leaderboards
+      </h3>
+    {% if leaderboards.main %}
+    <div class="columnwrap card2" id="lb-dropdown-menu"> <!-- Onclick Direct to User's Page. -->
+            <h3 id="lb-dropdown-main" class="lb-title">
+                <span><svg id="lb-dropdown-main-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                  </svg></span>
+                <span class="chocolate">Main Leaderboards</span>
+      </div>
+      {% endif %}
+</section>

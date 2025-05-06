@@ -1,0 +1,38 @@
+<head>
+    <!--
+     CCLB by F.L.0
+     Cookie Clicker property of Dashnet.
+     Brave art thou who trawl through my HTML.    
+     -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}CCLB{% endblock %}</title>
+    
+    <!-- Local Sortable -->
+    <script src="{{url_for('static', filename='js/sortable.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sortable-theme-minimal.css') }}" />
+
+    <!-- Custom CSS links -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href={{ url_for('static', filename='css/themes.css') }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/patterns.css') }}>
+
+    <script>
+        // Immediately check for saved theme to prevent flicker
+        const savedTheme = localStorage.getItem('theme') || 'theme-dark'; // Default to dark theme if none saved
+        document.body.classList.add(savedTheme);
+    </script>
+    
+    </head>
+
+<body>
+    <div class="bg"></div>
+    {% include 'header.html' %}
+    {% block content %}{% endblock %}
+    {%include 'footer.html' %}
+    <script
+			  src="https://code.jquery.com/jquery-3.7.1.min.js"
+			  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			  crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>

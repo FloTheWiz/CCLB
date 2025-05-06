@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block title %}CCLB - Home{% endblock %}
+{%block content %}
+{% if recent_changes %} {% include 'recentchanges.html' %} {% endif %}
+{% if leaderboards %} {% include 'leaderboards.html' %} {% endif %}
+{% endblock %}

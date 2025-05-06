@@ -1,0 +1,88 @@
+:root {
+    /* Text and Background */
+    --text: #13191b;
+    --background: #eeede7;
+    --grey-text: #cacaca;
+    
+    /* Blues (Primary Palette) */
+    --primary: #3A8BC4;    /* Darker primary */
+    --primary-light: #71A4D4; /* Lighter primary */
+    --primary-dark: #2D5172;  /* Darkest primary */
+
+    /* Secondary Palette */
+    --secondary: #4879A7;    /* Standard secondary */
+    --secondary-light: #6B92C1; /* Lighter secondary */
+    --secondary-dark: #2D5172;  /* Darkest secondary */
+
+    /* Tertiary Palette */
+    --tertiary: #2D5172;     /* Darker tertiary */
+    --tertiary-light: #5A7298; /* Lighter tertiary */
+    --tertiary-dark: #1B3751;  /* Darkest tertiary */
+
+    /* Muted Versions */
+    --muted-primary: #71A4D4bb;
+    --muted-secondary: #4879A7bb;
+    --muted-tertiary: #2D5172bb;
+}
+
+
+.theme-dark {
+    --bg-color: #000000;
+    --text: #e5e5e5;
+    --primary: #172b3e;
+    --secondary: #24384D;
+    --tertiary: #1B2D40;
+    --pattern-color: #252525;
+    --pattern-color-trans: #252525bb;
+}
+
+
+.theme-light {
+    --bg-color: #ffffff;
+    --text: #070808;
+    --primary: #226899;
+    --secondary: #4879A7;
+    --tertiary: #6B92C1;
+    --pattern-color: #888888;
+    --pattern-color-trans: #11111111;
+}
+
+.theme-cool {
+    --bg-color: #a1d7e8;
+    --text: #1f3f4d;
+    --primary: #2d98da;
+    --secondary: #71A4D4;
+    --tertiary: #5A7298;
+    --pattern-color: #2d98da;
+    --pattern-color-trans: #2d98dabb;
+}
+
+.theme-warm {
+    --bg-color: #8a3126;
+    --text: #1a0909;
+    --primary: #a23b36;
+    --secondary: #ae504c;
+    --tertiary: #803330;
+    --pattern-color: #db4545;
+    --pattern-color-trans: #db404088;
+}
+
+.theme-muted-light {
+    --bg-color: #eeede7;
+    --text: #1f1f1f;
+    --primary: #71A4D4aa;
+    --secondary: #4879A7aa;
+    --tertiary: #2D5172aa;
+    --pattern-color: #9c9c9c;
+    --pattern-color-trans: #9c9c9caa;
+}
+
+.theme-muted-dark {
+    --bg-color: #333333;
+    --text: #e0e0e0;
+    --primary: #2d5172bb;
+    --secondary: #4879A7bb;
+    --tertiary: #6B92C1bb;
+    --pattern-color: #0f0f0f;
+    --pattern-color-trans: #0f0f0faa;
+}

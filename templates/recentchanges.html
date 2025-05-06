@@ -1,0 +1,46 @@
+<section class="card columnwrap">
+    <h2 class="section-header dropdown" id="rc-dropdown"><span ><svg id="rc-dropdown-svg"xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+      </svg></span>Recent Changes</h2>
+    <div id="rc-dropdown-menu" class="columnwrap">
+        {% for recent_change in recent_changes %}
+        <div class="card2 change-container">
+            <!-- Link up IDs and Dropdowns in Jquery-->
+            <h3  class="lb-title chocolate dropdown"id="rc-dropdown-{{loop.index}}"><span><svg id="rc-dropdown-{{loop.index}}-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+              </svg></span>{{recent_change.board_name}}</h3>
+            <span class="timestamp chocolate" title="{{recent_change.timestamp}}">{{ format_date(recent_change.timestamp) | title }} </span>
+            <div class="card3 change-info" id="rc-dropdown-{{loop.index}}-menu">
+
+                <div class="recent-change-left">
+                    {% if recent_change.verified %}
+                    <img src="{{url_for('static', filename='img/verified.svg')}}" alt="Verified!" title="This Submission has been Verified" class="icon">
+                    {% else %}
+                    <img src="{{url_for('static', filename='img/unverified.svg')}}" alt="Unverified" title="This submission has not been verified" class="icon">
+                    {% endif %}
+                    <div class="recent-change-text">
+                        <h3 class="rank"><span class="chocolate">Rank:</span>
+                            {% if recent_change.rank == 1 %} 
+                            <span class="first">1st</span>
+                            {% elif recent_change.rank == 2 %}
+                            <span class="second">2nd</span>
+                            {% elif recent_change.rank == 3 %}
+                            <span class="third">3rd</span>
+                            {% endif %}
+                        </h3>
+                        <h3 class="qualifier"><span class="chocolate">{{recent_change.qualifier}}: </span>{{recent_change.qualifier_amount}}
+                    </div>
+                </div>
+                
+                <div class="recent-change-right">
+                <div class="recent-change-user"> <!-- Onclick Direct to User's Page.-->
+                    <h3 class="username"><span{% if recent_change.user.css %} style="{{recent_change.user.css}}" {% endif %}>{{recent_change.user.name}}</span></h3>
+                    <img class="flag" src="https://flagicons.lipis.dev/flags/4x3/{{recent_change.user.flag | lower}}.svg" alt="{{recent_change.user.name}}'s {{recent_change.user.flag}} Flag" title="{{recent_change.user.name}}'s {{recent_change.user.flag}} Flag"></img>
+                </div>
+                <img class="icon" src="{{recent_change.user.profile_url}}" alt="{{recent_change.user.name}}'s Profile Picture" title="{{recent_change.user.name}}'s Profile Picture">
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+</section>

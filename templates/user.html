@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}CCLB - Home{% endblock %}
+{%block content %}
+{% if user %} {% include 'user.html' %} 
+{% else %} 
+<section class="card columnwrap" style="justify-content: center">
+<h1 style="text-align: center">User Not Found</h1>
+<button onclick="window.location.href='/'" class="login">Home</button>
+</section>
+{% endif %}
+
+{% endblock %}

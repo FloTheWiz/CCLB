@@ -1,0 +1,19 @@
+<div class="card header">
+    <h1 class="title">Cookie Clicker Leaderboards</h1>
+    
+        <div class="login-container">
+        {% if session['discord_user'] %}
+        <button class="logout">Logout</button>
+        <div class="user-info-container" > <!-- Onclick Profile -->
+            <img src="{{user.profile_url}}" alt="{{session['discord_user']['name']}}'s Profile Picture" title="{{session['discord_user']['name']}}'s Profile Picture">
+            <h3 class="username">{{user.name}}</h3>
+            <img class="flag" src="https://flagicons.lipis.dev/flags/4x3/{{user.flag | lower}}.svg" alt="{{user.name}}'s {{user.flag}} Flag" title="{{user.name}}'s {{user.flag}} Flag"></img>
+        </div>
+        {% else %}
+        <button class="header-button login">
+            Login
+        </button>
+    </div>
+    {% endif %}
+        
+</div>
